@@ -20,7 +20,7 @@ export class Accessibility extends CommonAccessibility {
         let initialStateChanged = false;
 
         // Some versions of RN don't support this interface.
-        if (RN.AccessibilityInfo) {
+        if (RN.Platform.OS !== 'dom' as RN.PlatformOSType && RN.AccessibilityInfo) {
             // Subscribe to an event to get notified when screen reader is enabled or disabled.
             RN.AccessibilityInfo.addEventListener('change', (isEnabled: boolean) => {
                 initialStateChanged = true;

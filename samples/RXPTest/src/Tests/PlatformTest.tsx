@@ -44,6 +44,7 @@ class PlatformView extends RX.Component<RX.CommonProps, PlatformState> {
     render() {
         const platformTypeText = RX.Platform.select({
             'web': 'Browser (web)',
+            'dom': 'Browser (dom)',
             'ios': 'iOS',
             'android': 'Android',
             'windows': 'Windows (UWP)',
